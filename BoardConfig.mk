@@ -50,7 +50,8 @@ WIFI_DRIVER_FW_PATH_AP := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA := "/system/etc/firmware/fw_bcmdhd.bin"
 
 # Kernel
-TARGET_KERNEL_CONFIG := f520_cyanogenmod_defconfig
+TARGET_KERNEL_CONFIG := lineage_f520_test_defconfig
+
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
