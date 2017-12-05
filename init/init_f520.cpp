@@ -36,35 +36,15 @@
 
 void vendor_load_properties()
 {
-    char serial[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
+    // Force set serial
+    char serial[PROP_VALUE_MAX] = "LGF520S";
     char devicename[PROP_VALUE_MAX];
 
-//    serial = property_get("ro.boot.serialno");
-//    if (strncmp(serial, "LGF520S", 7) == 0) {
-        /* F520S */
-        property_set("ro.product.device", "aka");
-        property_set("ro.product.name", "aka_skt_kr");
-        property_set("ro.product.model", "LG-F520S");
-//    } else if (strncmp(serial, "LGF520K", 7) == 0) {
-         /* F520K */
-//        property_set("ro.product.device", "aka");
-//        property_set("ro.product.name", "aka_kt_kr");
-//        property_set("ro.product.model", "LG-F520K");
-//    } else if (strncmp(serial, "LGF520L", 7) == 0) {
-        /* F520L */
-//        property_set("ro.product.device", "aka");
-//        property_set("ro.product.name", "aka_lgu_kr");
-//        property_set("ro.product.model", "LG-F520L");
-//    } else {
-        /* Unknown */
-//        property_set("ro.product.device", "aka");
-//        property_set("ro.product.name", "aka_skt_kr");
-//        property_set("ro.product.model", "LG-F520S");
-//    }
+    /* F520S */
+    property_set("ro.product.device", "aka");
+    property_set("ro.product.name", "aka_skt_kr");
+    property_set("ro.product.model", "LG-F520S");
 
-//    device = property_get("ro.product.device");
-//    strlcpy(devicename, device, sizeof(devicename));
     strlcpy(devicename, "LG-F520S", sizeof(devicename));
     ERROR("Found hardware id: %s setting build properties for %s device\n", serial, devicename);
 }
